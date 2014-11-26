@@ -12,7 +12,7 @@ if (isset($_GET['q'])) {
 // Aktuális lap betöltése:
 switch ($page) {
   case 'kezdolap':
-    $pageTitle = "Kezdőlap";
+    include('controllers/frontPage.php');
     include('views/frontPage.php');
     break;
   case 'bemutatkozas':
