@@ -2,6 +2,8 @@
 
 session_start();
 
+$db = new mysqli('localhost', 'root', '', 'phpportal');
+$db->set_charset('utf8');
 
 // Aktuális lap kiválasztása:
 $page = 'kezdolap';
@@ -16,7 +18,7 @@ switch ($page) {
     include('views/frontPage.php');
     break;
   case 'bemutatkozas':
-    $pageTitle = "Bemutatkozás";
+    include('controllers/introductionPage.php');
     include('views/introductionPage.php');
     break;
   case 'kepgaleria':
@@ -32,4 +34,4 @@ switch ($page) {
     include('views/404Page.php');
 }
 
-
+$db->close();
