@@ -1,10 +1,10 @@
 <?php
 
-$pageTitle = "Bemutatkozás";
+$pageTitle = "Kapcsolat";
 
 // oldal tartalmának betöltése adatbázisból:
 
-$query = "SELECT * FROM `pages` WHERE `id`='bemutatkozas'";
+$query = "SELECT * FROM `pages` WHERE `id`='kapcsolat'";
 $result = $db->query($query);
 if ($db->errno) {
   die($db->error);

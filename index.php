@@ -26,7 +26,7 @@ switch ($page) {
     include('views/imageGalleryPage.php');
     break;    
   case 'kapcsolat':
-    $pageTitle = "Kapcsolat";
+    include('controllers/contactPage.php');
     include('views/contactPage.php');
     break;    
   default:
