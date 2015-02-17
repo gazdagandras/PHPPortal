@@ -42,3 +42,12 @@ body {
   color: white;
   padding: 10px 20px;
 }
+
+#header #navigation a {
+    color: black;
+    background: white;
+}
+#header #navigation a:hover {
+    color: black;
+    background: #dddddd;
+}
