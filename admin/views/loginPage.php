@@ -17,6 +17,7 @@
     <label>Jelszó:</label>
     <br>
     <input type="password" name="uPass">
+	<br>
     <input type="submit" name="loginSubmit">
   </form>
   
