@@ -4,7 +4,7 @@
 
 	<?php if (isset($_SESSION['logged'])) : ?>
 	
-	<p>Üdv az admin oldalon!</p>
+	<p>Üdv az admin oldalon, <?php echo $_SESSION['name']; ?>!</p>
 	
 	<?php else : ?>
 	
