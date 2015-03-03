@@ -13,7 +13,7 @@
 	
 	<?php else : ?>
 		
-		<?php if ($_SESSION['rights']==1 || $_SESSION['rights']==2) : ?>
+		<?php if ($_SESSION['rights']==1 || $_SESSION['rights']==2 || $_SESSION['rights']==3) : ?>
 	
 			<form name="newsForm" method="post" id="newsForm">
 				<label>Cím:</label>
@@ -32,6 +32,21 @@
 				<br>
 				<input type="text" name="date" class="shortText">
 				<br>
+				<label>Rovat:</label>
+				<br>
+				<select name="tag">
+				<?php 
+					foreach ($tags as $tag) {
+						echo '<option value="'.$tag['id'].'">'.$tag['description'].'</option>';
+					}
+				?>
+				</select>
+				<br>
+				<?php if ($_SESSION['rights']==1 || $_SESSION['rights']==2) : ?>
+					<label>Publikálható: </label>
+					<input type="checkbox" name="published" value="1">
+					<br>
+				<?php endif; ?>
 				<input type="submit" name="newsSubmit">
 			</form>
 			

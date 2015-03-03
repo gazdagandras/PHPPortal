@@ -23,6 +23,11 @@ body {
 .news {
   margin-bottom: 15px;
 }
+
+.news .tag {
+  text-transform: uppercase;
+}
+
 .news .title {
   border-bottom: 1px solid #555;
   color: #555;
