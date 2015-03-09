@@ -83,12 +83,9 @@ if (isset($_POST['newsSubmit'])) {
 // hír utólagos publikálása form feldolgozása:
 if (isset($_POST['publishSubmit'])) {
   
-	//var_dump($_POST); die;
 	foreach ($_POST as $k => $v) {
-		//var_dump($k, $v);
 		if ($k != 'publishSubmit') {
 			$query = "UPDATE news SET published=1 WHERE id=$v";
-			//var_dump($query); die;
 			$result = $db->query($query);
 			if ($db->errno) {
 				die($db->error);
@@ -96,7 +93,6 @@ if (isset($_POST['publishSubmit'])) {
 		}
 	}
 	
-	//die('Nyekk');
 	header("Location: $HOST/admin/?q=hirek");
 	exit;
 }
