@@ -109,7 +109,7 @@
 		<?php endif; ?>
 		
 		<?php if ($_SESSION['rights']==1 || $_SESSION['rights']==2) : ?>
-		
+			
 			<hr>
 			<h2>Publikálatlan hírek</h2>
 			
@@ -128,7 +128,11 @@
 						}
 					?>
 				</table>
-				<input type="submit" name="publishSubmit" value="Publikál">
+				<?php if ($c>1) : ?>
+					<input type="submit" name="publishSubmit" value="Publikál">
+				<?php else : ?>
+					<p>Nincs publikálatlan hír.</p>
+				<?php endif; ?>	
 			</form>
 			
 		<?php endif; ?>

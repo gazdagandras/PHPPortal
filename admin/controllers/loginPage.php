@@ -13,7 +13,7 @@ if (isset($_POST['loginSubmit'])) {
 	
 	// acc a db-ből:
 
-	$query = "SELECT * FROM `users` WHERE `uname`='$uName'";
+	$query = "SELECT * FROM `users` WHERE `uname`='$uName' AND active=1";
 	$result = $db->query($query);
 	if ($db->errno) {
 		die($db->error);
