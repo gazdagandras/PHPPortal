@@ -18,6 +18,10 @@ switch ($page) {
     include('controllers/loginPage.php');
     include('views/loginPage.php');
     break; 
+  case 'feltoltes':
+    include('controllers/uploadPage.php');
+    include('views/uploadPage.php');
+    break; 
   case 'hirek':
     include('controllers/newsPage.php');
     include('views/newsPage.php');
